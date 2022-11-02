@@ -57,7 +57,7 @@ function dataBaseTester(){
     }
 }
 
-dataBaseTester()
+// dataBaseTester()
 
 app.post('/masoodtable', (request,response) => {
     const {value} = request.body
