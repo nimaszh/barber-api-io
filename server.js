@@ -8,7 +8,7 @@ app.use(cors());
 
 const pool = new Pool({
     user: "postgres",
-    password: "nima702646",
+    password: "",
     host: "localhost",
     port: 5432,
     database: "barber"
@@ -49,8 +49,15 @@ app.put('/adminmasoodreserve', (request,response) => {
 })
 
 
-// timeGenerator(dateGenerator(6))
+function dataBaseTester(){
+    let i = 0
+    while(i < 7){
+        timeGenerator(dateGenerator(i))
+        i = i + 1
+    }
+}
 
+dataBaseTester()
 
 app.post('/masoodtable', (request,response) => {
     const {value} = request.body
